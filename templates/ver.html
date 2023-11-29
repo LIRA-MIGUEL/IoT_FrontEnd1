@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../static/js/update.js"></script>
+    <title>Document</title>
+    <style>
+        input:read-only{
+            background-color: aliceblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Editar</h1>
+    <hr size="10" color="black">
+    <form id="insert-form" name="insert-form">
+        <p>
+        <input hidden type="text" id="identificador" name="identificador" readonly>
+       <!--<input type="text" id="emailInput" name="email">-->
+        </p>
+        <p>
+        <label for="nombre">Dispositivo:</label>
+        <input type="text" id="nombre" name="nombre" readonly>
+        </p>
+        <label for="estado">Estado:</label>
+        <!-- Cambia el id del checkbox a "status" -->
+        <input type="checkbox" name="status" id="status">
+
+        <p>
+            <button type="button" onclick="updateDispositivo()">Enviar</button>
+            <a href="/">Regresar</a>
+        </p>
+    </form>
+</center>
+<script>
+    function updateDispositivo() {
+        var identificador = document.getElementById("identificador").value;
+        var nombre = document.getElementById("nombre").value;
+        
+        // Obtén el estado del checkbox
+        var estadoCheckbox = document.getElementById("status").checked;
+        
+        // Convierte el estado del checkbox a un valor numérico (0 o 1)
+        var estado = estadoCheckbox ? 1 : 0;
+
+        var estado = estado.toString()
+        console.log(estado);
+        updateData(identificador, nombre, estado);
+    }
+</script>
+</body>
+
+
+</html>

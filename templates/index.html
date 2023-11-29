@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contactos</title>
+        <script type="text/javascript" src="../static/js/get_all.js"></script>
+    </head>
+    <body>
+        <center>
+            <div id="menu">
+                <h1>Dispositvos</h1>
+                <a href="/prueba">Prueba</a>
+            </div>
+
+        <hr size="10" color="black">
+        <br>
+        <table border="1" id="table_dispositivos">
+            <thead id="thead_dispositivos">
+                <th>Dispositivo</th>
+                <th>Estado</th>
+                <th>Opciones</th>
+            </thead>
+            <tbody id="tbody_dispositivos">
+            </tbody>
+        </table>
+    </center>
+        <script>
+            document.body.onload = getAll();
+        </script>
+    </body>
+</html>
