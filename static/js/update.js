@@ -6,8 +6,8 @@ const dispositivo = urlParams.get('identificador');
 function getDispositivoById(dispositivo) {
     // Realiza una solicitud para obtener el registro por su ID, por ejemplo:
     const request = new XMLHttpRequest();
-    request.open('GET', "http://localhost:8000/dispositivos/" + dispositivo);
-    //request.open('GET', "https://herokubackendsql-03fb6209ab45.herokuapp.com/contactos/" + email);
+    //request.open('GET', "http://localhost:8000/dispositivos/" + dispositivo);
+    request.open('GET', "https://iotbackend-640e9ed63b8e.herokuapp.com/dispositivos/" + dispositivo);
     request.send();
 
     request.onload = (e) => {
@@ -34,10 +34,8 @@ getDispositivoById(dispositivo);
 
 function updateData(id, nombre, valor) {
     var request = new XMLHttpRequest();
-    var url = "http://localhost:8000/dispositivos/" + id;
-    //var url = "https://herokubackendsql-03fb6209ab45.herokuapp.com/contactos/" + email;
-
-
+    //var url = "http://localhost:8000/dispositivos/" + id;
+    var url = "https://iotbackend-640e9ed63b8e.herokuapp.com/dispositivos/"+ id;
 
     var data = {
         id: id,
