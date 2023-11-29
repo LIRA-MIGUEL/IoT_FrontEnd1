@@ -11,10 +11,10 @@ def index():
 def ver():
     return render_template('ver.html')
 
-@app.route("/prueba", methods=["GET", "POST"])
-def prueba():
+@app.route("/observar", methods=["GET"])
+def observar():
     """Pagina para probar DOM"""
-    return render_template('prueba.html')
+    return render_template('observar.html')
 
 #if __name__ == '__name__':
 #    app.run()

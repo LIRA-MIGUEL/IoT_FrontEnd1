@@ -18,20 +18,32 @@ function getAll() {
 
             var tr = document.createElement("tr");
             var td_nombre = document.createElement("td");
+
             var td_estado = document.createElement("td");
             var td_opciones = document.createElement("td");
 
             td_nombre.innerHTML = dispositivo["dispositivo"];
 
-            if(dispositivo["valor"] === 0){
-                td_estado.innerHTML = "Inactivo";
-            } else if (dispositivo["valor"] === 1){
-                td_estado.innerHTML = "Activo";
-            } else{
-                td_estado.innerHTML = "Valor Incorrecto";
+
+            if (dispositivo["id"] != 2){
+                if(dispositivo["valor"] === 0){
+                    td_estado.innerHTML = "Inactivo";
+                } else if (dispositivo["valor"] === 1){
+                    td_estado.innerHTML = "Activo";
+                } else{
+                    td_estado.innerHTML = "Valor Incorrecto";
+                }
+
+                td_opciones.innerHTML = "<a href='/ver?identificador=" + dispositivo["id"] + "'>Modificar</a>"
+            } else {
+
+                td_estado.innerHTML = dispositivo["valor"];
+
+
+                td_opciones.innerHTML = "<a href='/observar?identificador=" + dispositivo["id"] + "'>Ver</a>"
+
             }
 
-            td_opciones.innerHTML = "<a href='/ver?identificador=" + dispositivo["id"] + "'>Modificar</a>"
 
             tr.appendChild(td_nombre);
             tr.appendChild(td_estado);
