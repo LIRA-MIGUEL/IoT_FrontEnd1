@@ -1,50 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dispositivos</title>
-    <script type="text/javascript" src="../static/js/get_all.js"></script>
-
-    <!-- Estilos CSS en línea para dar estilo básico a la tabla -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        center {
-            text-align: center;
-        }
-
-        #menu {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-        }
-
-        #table_dispositivos {
-            border-collapse: collapse;
-            width: 80%;
-            margin-top: 20px;
-        }
-
-        #table_dispositivos th, #table_dispositivos td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        #table_dispositivos th {
-            background-color: #333;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <center>
-        <div id="menu">
-            <h1>Dispositvos</h1>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dispositivos</title>
+        <script type="text/javascript" src="../static/js/get_all.js"></script>
+    </head>
+    <body>
+        <center>
+            <div id="menu">
+                <h1>Dispositvos</h1>
+                <!--<a href="/prueba">Prueba</a>-->
+            </div>
 
         <hr size="10" color="black">
         <br>
@@ -58,17 +25,8 @@
             </tbody>
         </table>
     </center>
-
-    <script>
-        // Envuelve la llamada a la función getAll() dentro de otra función
-        function init() {
-            getAll();
-        }
-
-        // Utiliza un escuchador de eventos para llamar a la función init() después de que el DOM se haya cargado por completo
-        document.addEventListener("DOMContentLoaded", init);
-    </script>
-</body>
+        <script>
+            document.body.onload = getAll();
+        </script>
+    </body>
 </html>
-
-
