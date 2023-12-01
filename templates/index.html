@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dispositivos</title>
-        <script type="text/javascript" src="../static/js/get_all.js"></script>
-    </head>
-    <body>
-        <center>
-            <div id="menu">
-                <h1>Dispositvos</h1>
-                <!--<a href="/prueba">Prueba</a>-->
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispositivos</title>
+    <script type="text/javascript" src="../static/js/get_all.js"></script>
+</head>
+<body>
+    <center>
+        <div id="menu">
+            <h1>Dispositvos</h1>
+        </div>
 
         <hr size="10" color="black">
         <br>
@@ -25,8 +24,16 @@
             </tbody>
         </table>
     </center>
-        <script>
-            document.body.onload = getAll();
-        </script>
-    </body>
+
+    <script>
+        // Envuelve la llamada a la función getAll() dentro de otra función
+        function init() {
+            getAll();
+        }
+
+        // Utiliza un escuchador de eventos para llamar a la función init() después de que el DOM se haya cargado por completo
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</body>
 </html>
+
