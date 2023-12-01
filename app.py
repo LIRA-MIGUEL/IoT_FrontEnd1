@@ -16,5 +16,5 @@ def observar():
     """Pagina para probar DOM"""
     return render_template('observar.html')
 
-#if __name__ == '__name__':
-#    app.run()
+if __name__ == '__name__':
+   app.run()

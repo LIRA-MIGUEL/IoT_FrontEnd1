@@ -1,7 +1,7 @@
 function getAll() {
     var request = new XMLHttpRequest();
     //request.open('GET', "http://localhost:8000/dispositivos");
-    request.open('GET', "https://iotbackend-640e9ed63b8e.herokuapp.com/dispositivos");
+    request.open('GET', "https://pruebaback-93d404ffa0df.herokuapp.com/dispositivos");
     request.send();
 
     request.onload = (e) => {
