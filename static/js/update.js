@@ -34,8 +34,8 @@ getDispositivoById(dispositivo);
 
 function updateData(id, nombre, valor) {
     var request = new XMLHttpRequest();
-    //var url = "http://localhost:8000/dispositivos/" + id;
-    var url = "https://pruebaback-93d404ffa0df.herokuapp.com/dispositivos/"+ id;
+    var url = "http://localhost:8000/dispositivos/" + id;
+    //var url = "https://pruebaback-93d404ffa0df.herokuapp.com/dispositivos/"+ id;
 
     var data = {
         id: id,

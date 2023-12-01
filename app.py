@@ -1,9 +1,8 @@
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/",  methods=["GET"])
+@app.route("/", methods=["GET"])
 def index():
     return render_template('index.html')
 
@@ -16,5 +15,5 @@ def observar():
     """Pagina para probar DOM"""
     return render_template('observar.html')
 
-if __name__ == '__name__':
-   app.run()
+if __name__ == '__main__':
+    app.run()

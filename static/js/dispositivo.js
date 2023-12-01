@@ -1,11 +1,11 @@
 // Obtén el parámetro 'id' de la URL
 const urlParams = new URLSearchParams(window.location.search);
-const dispositivo = urlParams.get('identificador');
+const dispositivo = urlParams.get('dispositivo');
 // Función para obtener un solo registro por su ID
 function getDispositivoById(dispositivo) {
     // Realiza una solicitud para obtener el registro por su ID, por ejemplo:
     const request = new XMLHttpRequest();
-    //request.open('GET', "http://localhost:8000/dispositivos/" + dispositivo);
+    //request.open('GET', "http://127.0.0.1:8000/dispositivos/" + dispositivo);
     request.open('GET', "https://pruebaback-93d404ffa0df.herokuapp.com/dispositivos/" + dispositivo);
     request.send();
 
