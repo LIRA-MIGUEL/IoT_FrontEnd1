@@ -6,7 +6,7 @@ function getDispositivoById(dispositivo) {
     // Realiza una solicitud para obtener el registro por su ID, por ejemplo:
     const request = new XMLHttpRequest();
     //request.open('GET', "http://127.0.0.1:8000/dispositivos/" + dispositivo);
-    request.open('GET', "https://pruebaback-93d404ffa0df.herokuapp.com/dispositivos" + dispositivo);
+    request.open('GET', "https://pruebaback-93d404ffa0df.herokuapp.com/dispositivos/" + dispositivo);
     request.send();
 
     request.onload = (e) => {
